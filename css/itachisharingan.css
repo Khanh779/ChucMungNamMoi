@@ -1,0 +1,183 @@
+
+
+.normal-sharingan, .mangekyou-sharingan, .eternal-mangekyou-sharingan, .rinnegan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+   animation: rotation 4s infinite;
+
+ 
+}
+
+
+
+.eye-container {
+  padding: 10px;
+   border-width: 10px;
+  border-color: black;
+}
+
+.circle {
+  border-radius: 50%;
+   border-width: 10px;
+  border-color: black;
+}
+
+.eye {
+  
+
+  overflow: hidden;
+  cursor: pointer;
+  position:relative;
+  width: 100px;
+  height: 100px;
+  border: 5px solid var(--eye-border-color);
+  transition: 0.3s;
+  opacity: 0.9;
+  background: var(--eye-background-radial);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.eye > .inner-eye {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 5px solid black;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+
+
+
+}
+
+.tag {
+  position:absolute;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 20px;
+  background-color: black;
+ 
+}
+
+.tag::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 50px solid black;
+  border-radius: 50%;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  left: 2px;
+  top: -3px;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+
+
+.eye:hover {
+  z-index: 1;
+  box-shadow: 0 0 20px rgb(201, 13, 13);
+  /*animation: scale 2.3s ease-in-out, glow .5s ease-in-out;*/
+  transform: scale(1.1);
+  opacity: 1;
+  
+}
+
+.eye:hover .inner-eye {
+  /*animation: rotation 2.5s ease-in-out 1s;*/
+}
+
+
+
+.eye:active {
+  box-shadow: none;
+  animation: none;
+  transform: scale(1);
+  opacity: 1
+}
+
+
+/* ITACHI EYE START */
+.itachi-eye {
+
+  background: radial-gradient(circle, hsl(0,100%,36%) 55%, rgba(140,42,42,1) 60%, rgba(95,28,28,1) 0%, rgba(0,0,0,1) 70%);
+ 
+}
+
+.itachi-eye::after {
+  box-shadow: 0 0 10px rgb(143, 19, 19);
+  background: rgb(143, 19, 19);
+}
+
+.itachi-eye > .inner-eye {
+  border: none;
+  background: transparent;
+  width: 12px;
+  height:12px;
+}
+
+.itachi-eye > .inner-eye > .tag-container > .tag {
+  top: -60px;
+  background-color: transparent;
+  width: 178px;
+  height: 78px;
+  border-radius: 0;
+  overflow: hidden;
+  transform-origin: 5px 5px;
+}
+
+.itachi-eye > .inner-eye > .tag-container > .tag::after {
+  border-left: 22px solid black;
+  top: 1px;
+  left: 80px;
+  width: 188px;
+  height: 98px;
+}
+
+.itachi-eye > .inner-eye > .tag-container:nth-child(1) {
+  transform: rotate(-30deg);
+}
+
+.itachi-eye > .inner-eye > .tag-container:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.itachi-eye > .inner-eye > .tag-container:nth-child(3) {
+  transform: rotate(210deg);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}

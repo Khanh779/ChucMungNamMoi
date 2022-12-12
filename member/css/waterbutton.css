@@ -1,0 +1,49 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: White;
+  background: rgb(240, 75, 91);
+  background: linear-gradient(90deg, rgba(240, 75, 91,1) 0%, rgba(240, 75, 91,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgb(240, 75, 91,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+  border-radius: 20px;
+
+  border: 6px solid rgb(240, 75, 91);
+  box-shadow: 0 0 60px rgba(240, 75, 91,.64);
+  position: relative;
+
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: white;
+  transform: translateY(-6px);
+}
+
+
+
+
+

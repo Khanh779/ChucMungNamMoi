@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Chào</title>
+
+  <style>
+    .container {
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      width: 700px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 30px;
+      height: 432px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      margin: 0px;
+      padding-top: 30px;
+      background: WhiteSmoke;
+      justify-content: center;
+      background-image: url("image/neyr.gif");
+
+    }
+
+    .CanhBao {
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 0 5px 5px rgba(47, 138, 229, 0.4);
+      margin-top: 10px;
+      width: 97%;
+      height: 15px;
+      border-radius: 20px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    @media print {
+
+      html,
+      body {
+        display: none;
+        /* hide whole page */
+      }
+    }
+
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #ddd;
+      transition: 0.8s;
+      border-radius: 5px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(255, 83, 83);
+      transition: 0.4s;
+      border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(255, 103, 103);
+      transition: 1s;
+    }
+
+    .HopThoai {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: hidden;
+      /* Enable scroll if needed */
+
+      /*-webkit-filter: blur(8px);
+      filter: blur(8px);*/
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      /* Fallback blur color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+
+    /* Modal Content */
+    .HopThoai-content {
+
+      margin: auto;
+      padding: 20px;
+      width: 80%;
+      overflow: auto;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+      position: relative;
+      background-color: #fefefe;
+      border: 3px solid rgb(240, 80, 80);
+      border-radius: 20px;
+    }
+
+
+
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: -10px;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+
+</head>
+
+<body on oncontextmenu="return false;" ondragstart="return false;" ondrag="return false" ondrop="return false;">
+
+  <div style="display: flex; justify-content:center;">
+    <div class="sharingan">
+      <div class="pupil"></div>
+      <div class="iris"></div>
+      <div class="tomoes">
+        <div class="tomoe-area">
+          <div class="tomoe"></div>
+        </div>
+        <div class="tomoe-area">
+          <div class="tomoe"></div>
+        </div>
+        <div class="tomoe-area">
+          <div class="tomoe"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-left: 25px;">
+      <div class="container">
+        <div>
+          <font color="gray" size="3">Chào mọi người, chúc mọi người năm mới vui vẻ😁 Tôi làm màu đỏ tượng trưng màu
+            tết.</font>
+        </div>
+        <div>
+          <font color="gray" size="3">Bạn muốn xem thêm thông tin web, ấn <a style="color:dodgerblue; cursor: pointer;"
+              id="myBtn">vô dòng chữ màu xanh này</a>.</font>
+        </div>
+        <div>
+          <font color="gray" size="3">Danh sách này chỉ là tạm thời (t sắp xếp ngẫu nhiên, riêng 2 người đc lên đầu), có
+            thể sẽ cập nhật trong tương lai hoặc ko.</font>
+        </div>
+        <div>
+          <font color="gray">Nhập tên vào textbox dưỡi đây để tìm kiếm nhanh hơn.
+          </font>
+        </div>
+        <div class="inputWithIcon">
+          <input type="text" placeholder="Nhập tên của bạn (VD: Trần Dần)" id="myInput" onkeydown="myFunction()">
+          <i class="fa fa-user fa-lg fa-fw" aria-hidden="false"></i>
+        </div>
+
+        <div id="myUL" class="list">
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href='./member/Phuong_Anh.html';">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Hồ Khôi Phục</font>
+              </a>
+              <div>
+                <font size="2" color="#ffff">Bạn bè, tên đẹp, phải nhất định đưa lên đầu 👍</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;">
+            <img src="member/image/Tran_Dan.jpg" width="60" height="60" >
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Bác Trần Dần</font>
+              </a>
+              <div>
+                <font size="2" color="#ffff">Tên thật: Trần Văn Dần 👍</font>
+              </div>
+              <div>
+                <font size="2" color="#E8E8E8">Năm sinh: 24/2/1950 (Âm lịch ngày 6 tháng Giêng năm Canh Dần) 🐅 🐯
+                </font>
+              </div>
+              <div>
+                <font size="2" color="#E8E8E8">Tuổi: 73 (Năm 2023)✅ - Quê quán: Người Việt (Gốc Hoa) 🕧</font>
+              </div>
+              <div>
+                <font size="2" color="#E8E8E8">Facebook: Tiên Tri Vũ Trụ Trần Dần 👉<a style="Color:White;"
+                    href="https://www.facebook.com/people/Ti%C3%AAn-Tri-V%C5%A9-Tr%E1%BB%A5-Tr%E1%BA%A7n-D%E1%BA%A7n/100053725575166/">Blog
+                    Facebook
+                    của bác</a></font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Trần Đăng Khoa</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè (Biết VNCH) 😁</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="White">Nguyễn Phương Anh</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Bùi Minh Sơn</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Lê Đoàn Thị Hồng Ngọc</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè, tôi ko sợ Ngọc đâu... À nhầm... em chỉ dám viết lời chúc thôi, ko
+                  dám
+                  viết thêm gì đâu 😅</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Nguyễn Nhật Minh</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè tôi. Bạn này ko sợ <b>Hồng Ngọc</b> 👍</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Lê Hoàng Gia Đại</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Nguyễn Huỳnh Bảo Nhi</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Trần Minh Trí</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Minh Tấn</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Mai Thi</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Thiên Phúc</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Ngọc Tú</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Nguyễn Thành Duy</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Đỗ Khánh Duy</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè, dù là gì đi nữa đây là web do tôi lập trình ra, việc t xếp
+                  chung/cạnh với N...
+                  hay ko là quyền t 😇😏</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Vũ Xuân Kiên</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Trần Vương Tâm Như</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè và bạn này đã từng <u>cứu tôi</u> khỏi cái ông gì đó hay cản
+                  trở t bằng 1 việc <u>(delete something)</u>, cảm ơn bạn</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Mai Hà Quế Anh</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Nguyễn Anh Hào</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn tôi</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Trần Thái Vũ</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn tôi</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Tuyết Nhi</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Bảo Nhi</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Diệu Hiền</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Nguyễn Quốc Khánh</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Phan Văn Bảo</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Nguyễn Duy Hùng</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Bùi Xuân Kiên</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Trang Mạnh Phúc</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Phan Trọng Nghĩa</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Lê Việt Toàn</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Lợi Vỹ</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+          <button style="display: flex; align-items: center;"
+            onclick="location.href=&#39;./member/Phuong_Anh.html&#39;;">
+            <div style="margin-left: 10px;">
+              <a>
+                <font color="white">Thanh Dương</font>
+              </a>
+              <div>
+                <font size="2" color="#E8E8E8">Bạn bè</font>
+              </div>
+            </div>
+          </button>
+
+
+        </div>
+
+      </div>
+
+      <div class="CanhBao">
+        <img src="image/info_Gra.png" width="25" height="25/">
+        <div style="margin-left:10px">
+          <div>
+            <font color="gray" size="3">Thiết kế: Trần Quốc Khánh (Git), Cố vấn: Trần Dần.</font>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+      <div style="margin-left:20px" class="mangekyou-sharingan">
+        <div class="eye circle itachi-eye">
+          <div class="inner-eye circle">
+            <div class="tag-container">
+              <div class="tag circle"></div>
+            </div>
+            <div class="tag-container">
+              <div class="tag circle"></div>
+            </div>
+            <div class="tag-container">
+              <div class="tag circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- The Modal -->
+  <span id="myModal" class="HopThoai">
+
+    <!-- Modal content -->
+    <div class="HopThoai-content">
+      <span class="close">&times;</span>
+
+      <div>
+        <font color="Gray">
+          <p>Chào mọi người, đây là web thiết kế cho bạn bè, còn có web tôi dành cho gia đình, người thân, người
+            quen hay thầy cô nhưng nó ở web khác.</p>
+          <p>Sau khi thi t có thêm chút thời gian viết code và tôi chỉ thiết kế được web đơn giản, đơn sơ kiểu này thôi,
+            chứ t ko làm cho nó trở nên dễ thương hay đẹp được, đôi lúc sẽ có 1 vài lỗi (chính tả, hiển thị,...), chưa
+            được tối ưu web lắm mong mn thông cảm.
+          </p>
+          <p>Khi tui làm lời chúc này tui cũng tính chèn thêm hình đại diện của mn để đặt trước các nút nhấn (chứa
+            tên mn) và gắn thêm vô form thư chúc tết ở web này, nhưng tui cũng ngại xin phép mn,
+            vì nó cũng liên quan đến quyền riêng tư cá nhân nên cuối cùng t thôi, nhưng nếu tui chèn
+            hình của mọi người tui cũng sẽ bảo đảm riêng tư cho hình
+            và cuối cùng t chỉ chèn hình 1 ng duy nhất , đó là <i>Trần Dần (riêng bác này ko cần xin phép, ko cần
+              phải mất công chỉnh chế độ riêng tư vì quá nổi tiếng và lan đầy trên mạng)</i>.
+          </p>
+
+          <div style="display: none; color: dodgerblue; cursor: pointer;" id="MoRongKhoiPhuc">> Nếu bạn có muốn đọc
+            thêm, nhấn dòng
+            chữ xanh này (sẽ biết t <u>yêu gì</u>) hãy đeo kính tối nếu ko muốn bị chói mắt, vì đây là ánh sáng của
+            Đảng.
+          </div>
+          <div style="display:none;" id="KPMo">
+            <p style=" background: linear-gradient(to right, rgb(230,73,73) 0%, rgb(230,200,61) 100%);background-clip: text;
+                -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+                transition: color 1s ease-in-out;"><b>T YÊU ĐẢNG CỘNG HÒA(VNCH)CHỨ GÌ NỮA ❤️
+              </b></p>
+          </div>
+          <p style="color: rgb(0,168,148)">Lời khuyên: để các sự kiện, đồ họa, giao diện, của các đối tượng hoạt động 1
+            cách tốt nhất hãy cập nhật trình duyệt lên phiên bản mới nhất (Nếu chưa cập nhật) và mở trên máy tính
+            nha và hi vọng trang web này mang cho bạn niềm vui cũng như lời chúc tết trong đêm giao thừa hay mồng 1
+            tết.</p>
+
+          <p>À mà tui cũng tính viết 1 code thêm con mắt <i>Rinnegan</i> mà t thấy <i>khó - phức tạp quá</i> nên thôi. T
+            móc đại con mắt của <a href="https://vi.wikipedia.org/wiki/Uchiha_Itachi">Uchiha Itachi</a> và nhét nó vô
+            đây.</p>
+        </font>
+      </div>
+
+    </div>
+
+  </span>
+  <link rel="stylesheet" href="css/membuttonlist.css"/>
+  <link rel="stylesheet" href="css/sharinganstyle.css"/>
+  <link rel="stylesheet" href="css/textbox.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/itachisharingan.css"/>
+
+  <script>
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("button");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "flex";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  <script>
+    var ex = document.getElementById("KPMo");
+    var btn = document.getElementById("MoRongKhoiPhuc");
+    btn.onclick = function () {
+
+      if (ex.style.display == "block")
+        ex.style.display = "none"
+
+      if (ex.style.display == "none")
+        ex.style.display = "block";
+
+    }
+
+  </script>
+
+  <script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <script language="javascript">
+    var noPrint = true;
+    var noCopy = true;
+    var noScreenshot = true;
+    var autoBlur = true;
+  </script>
+
+  <script type="text/javascript" src="./js/noprint.js">
+    var noPrint = true;
+    var noCopy = true;
+    var noScreenshot = true;
+    var autoBlur = true;
+  </script>
+
+
+</body>
+
+</html>
