@@ -17,7 +17,7 @@
 
 /* Style the buttons inside the tab */
 .list button {
-  background-color: rgba(255, 63, 63, 1.0);
+  background-color: rgb(244, 57, 57);
   color: black;
   border-radius: 10px;
   padding: 8px 8px;
@@ -35,7 +35,7 @@
 
 /* Change background color of buttons on hover */
 .list button:hover {
-  background-color: rgba(255, 93, 93, 1.0);
+  background-color: rgb(246, 79, 79);
   transition: 0.4s;
 }
 

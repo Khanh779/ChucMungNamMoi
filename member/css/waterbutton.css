@@ -14,7 +14,6 @@
   text-transform: uppercase;
   letter-spacing: 1.3px;
   color: White;
-  background: rgb(240, 75, 91);
   background: linear-gradient(90deg, rgba(240, 75, 91,1) 0%, rgba(240, 75, 91,1) 100%);
   border: none;
   border-radius: 1000px;
@@ -40,6 +39,7 @@ button::before {
 
 .button:hover, .button:focus {
   color: white;
+  background: linear-gradient(270deg, rgb(234, 78, 94) 0%, rgb(228, 55, 73) 100%);
   transform: translateY(-6px);
 }
 
