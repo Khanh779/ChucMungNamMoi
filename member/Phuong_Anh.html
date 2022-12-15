@@ -25,10 +25,10 @@
       border-top: none;
       border-bottom: none;
       /*height: 200px;*/
-      width: 70%;
+      width:500px;
       border-radius: 10px;
       padding: 15px;
-      margin-left: 20px;
+      margin-left: 10px;
       margin-top: 10px;
 
     }
@@ -38,8 +38,8 @@
       background-color: White;
       display: flex;
       background-color: transparent;
-      width: 100%;
-    
+      max-width: 100%;
+      padding: 10px;
 
     }
 
@@ -54,6 +54,35 @@
       border-radius: 5px;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       align-content: center;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: rgb(183, 183, 183);
+      transition: 0.8s;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #6d50e2;
+      transition: 0.4s;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7e64e6;
+      transition: 1s;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -71,9 +100,8 @@
         <button class="tablinks active" onclick="openTab(event, 'Begin')" id="defaultOpen">👍 1.Lời đầu</button>
         <button class="tablinks" onclick="openTab(event, 'LastYear-NewYear')">⏲️ 2.Năm cũ - Năm mới</button>
         <button class="tablinks" onclick="openTab(event, 'Happy')">✉️ 3.Lời chúc tết</button>
-        <button class="tablinks" onclick="openTab(event, 'Begin')">👨&zwj;👩&zwj;👧&zwj;👦 4.Về cậu &amp; gia
-          đình</button>
-        <button class="tablinks" onclick="openTab(event, 'Learn')">🧑&zwj;🎓 5.Học tập</button>
+        <button class="tablinks" onclick="openTab(event, 'YourFamily')">👨&zwj;👩&zwj;👧&zwj;👦 4.Về cậu &amp; gia đình</button>
+        <button class="tablinks" onclick="openTab(event, 'Me')">👍 Còn mình</button>
 
       </div>
 
@@ -81,36 +109,52 @@
       <div id="Begin" class="tabcontent" style="display: block;">
         <h3>Lời đầu tiên</h3>
         <p>Tui xin chào cậu nhá, có lẻ cậu cảm thấy chúc tết kiểu này hơi phức tạp - hơi rừm rà đúng ko nhỉ? 😅.</p>
-        <p>Tui sorry bà vì gán hình bà mà ko xin phép trc nha, nhưng t ko có ý gì đâu, t chèn thêm hình kèm lời chúc cậu
+        <p>Tui <u>sorry</u> cậu, bởi vì gán hình cậu mà ko xin phép trước, nhưng vì t chèn thêm hình kèm lời chúc cậu
           để biết Phương Anh là ai, chứ nguyên lãnh thổ Việt Nam nhiều người tên Phương Anh lắm.</p>
 
-        <li>Tui thiết kế giao diện màu đỏ (màu tết) và màu tím này vì trong <a href="https://www.messenger.com/">Messenger</a> cậu đã nhắn
+        <li>Tui thiết kế giao diện màu đỏ (màu tết) và màu tím này vì trong <a
+            href="https://www.messenger.com/">Messenger</a> cậu đã nhắn
           tui là thích những thứ mộng mơ và người ta thường bảo là <i>"Màu tím Mộng Mơ"</i>
         </li>
       </div>
 
       <div id="LastYear-NewYear" class="tabcontent" style="display: none;">
         <h3>Năm cũ</h3>
-        <p>Năm ngoái chắc có lẽ bà đã trải qua nhiều chuyện vui hay buồn cũng có, đôi lúc hồi hộp về thứ gì đó... , đặc
-          biệt cái mong muốn đậu <u><i>Trường Đại Học Tôn Đức Thắng</i></u>.</p>
-        <p>Và r mong muốn ấy cũng thành hiện thực sau <b>12 năm</b> học hành chăm chỉ, cố gắng nỗ lực của mình 👍 (<b>Ngoài lề:</b> à mà
-          t tính chèn icon <u>vỗ tay và cố gắng</u> trên web
-          ko biết do trí nhớ t kém hay tại do cậu dễ thương quá nên t quên mất cái mã icon đó r 😥)</p>
+        <div>Năm ngoái chắc có lẽ bà đã trải qua nhiều chuyện vui hay buồn cũng có, đôi lúc hồi hộp về thứ gì đó... ,
+          đặc
+          biệt cái mong muốn đậu <i>Trường Đại Học Tôn Đức Thắng</i>.</div>
+        <div>Và r mong muốn ấy cũng thành hiện thực sau <b>12 năm</b> học hành chăm chỉ, cố gắng nỗ lực của mình 👍
+        </div>
 
         <h3>Năm mới</h3>
-        <p>Bước sang năm mới, hi vọng cậu sẽ hoàn thành những mong muốn còn dang dở ở tương lai phía trước, đạt thành
-          công trong cuộc sống.</p>
+        <div>Chuyển sang <u>Tab "Lời chúc tết"</u> nhé :)</div>
 
       </div>
 
-      <div id="Future" class="tabcontent" style="display: none;">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
+      <div id="Happy" class="tabcontent" style="display: block;">
+        <h3>Lời chúc tết</h3>
+        <p>Bước sang năm mới, chúc cậu và gia đình gặp nhiều may mắn và thành công trong cuộc sống, bình an, hạnh phúc,
+          mọi điều xuông sẻ, vạn sự như ý và <u>làm ăn phát tài phát lộc</u> (Gia đình).</p>
+        <p>Còn cậu gặp nhiều may mắn, học tập tốt và vui vẻ trong cuộc sống, mọi điều thuận lợi trong học tập, (vân vân) và luôn
+          giữ trên môi một nụ cười nhá.</p>
+      </div>
+
+
+
+      <div id="YourFamily" class="tabcontent" style="display: none;">
+        <h3>Về cậu và gia đình</h3>
+        <p>Sau đây tui có 1 bài thơ như sau.</p>
+      </div>
+
+      <div id="Me" class="tabcontent" style="display: none;">
+        <h3>Về mình</h3>
+        <p>Đây là lý do vì sao, tui <u>ko thể gửi tin nhắn dài này</u> đến cậu, bởi vì đây là đoạn code để tạo ra web này khá dài, nó sẽ <u>ko thể diễn đạt hết</u> những điều t mong muốn. Chỉ có trình duyệt web và t (là ng lập trình) ra web này mới hiểu.</p>
+        <p>Với lại ko phải ai theo CNTT mới có thể hiểu đc (chỉ có 1 số ng).</p>
       </div>
 
 
     </div>
-  
+
 
     <div class="wrap">
       <button class="button" onclick="show_alert()">Happy New Year nhé! 😺✨🎉</button>

@@ -22,15 +22,17 @@
       border-top: none;
       border-left: none;
       border-right: none;
+
+
     }
 
     body {
       position: relative;
-      display: flex;
+
       margin: 0px;
-      padding-top: 30px;
+      padding: 5%;
       background: WhiteSmoke;
-      justify-content: center;
+
       background-image: url("image/neyr.gif");
 
     }
@@ -61,13 +63,15 @@
     ::-webkit-scrollbar {
       width: 10px;
       height: 10px;
+      cursor: pointer;
     }
 
     /* Track */
     ::-webkit-scrollbar-track {
-      background: #ddd;
+      background: rgb(183, 183, 183);
       transition: 0.8s;
       border-radius: 5px;
+      cursor: pointer;
     }
 
     /* Handle */
@@ -75,12 +79,14 @@
       background: rgb(255, 83, 83);
       transition: 0.4s;
       border-radius: 5px;
+      cursor: pointer;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
       background: rgb(255, 103, 103);
       transition: 1s;
+      cursor: pointer;
     }
 
     .HopThoai {
@@ -90,13 +96,13 @@
       /* Stay in place */
       z-index: 1;
       /* Sit on top */
-      padding-top: 100px;
+      padding: 0px;
       /* Location of the box */
       left: 0;
       top: 0;
-      width: 100%;
+      width: 100vv;
       /* Full width */
-      height: 100%;
+      height: 100vh;
       /* Full height */
       overflow: hidden;
       /* Enable scroll if needed */
@@ -114,8 +120,9 @@
     /* Modal Content */
     .HopThoai-content {
 
-      margin: auto;
-      padding: 20px;
+
+      margin: 10%;
+      padding: 30px;
       width: 80%;
       overflow: auto;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -149,9 +156,9 @@
 
 </head>
 
-<body on oncontextmenu="return false;" ondragstart="return false;" ondrag="return false" ondrop="return false;">
+<body oncontextmenu="return false;" ondragstart="return false;" ondrag="return false" ondrop="return false;">
 
-  <div style="display: flex; justify-content:center;">
+  <div style="display: flex; justify-content:center; ">
     <div class="sharingan">
       <div class="pupil"></div>
       <div class="iris"></div>
@@ -168,7 +175,7 @@
       </div>
     </div>
 
-    <div style="margin-left: 25px;">
+    <div style="margin-left: 25px; ">
       <div class="container">
         <div>
           <font color="gray" size="3">Chào mọi người, chúc mọi người năm mới vui vẻ😁 Tôi làm màu đỏ tượng trưng màu
@@ -179,7 +186,8 @@
               id="myBtn">vô dòng chữ màu xanh này</a>.</font>
         </div>
         <div>
-          <font color="gray" size="3">Danh sách này chỉ là tạm thời (t sắp xếp ngẫu nhiên, riêng 2 người đc lên đầu), có
+          <font color="gray" size="3">Danh sách này chỉ là tạm thời (t sắp xếp ngẫu nhiên, riêng 2 người đc lên đầu),
+            có
             thể sẽ cập nhật trong tương lai hoặc ko.</font>
         </div>
         <div>
@@ -193,8 +201,7 @@
 
         <div id="myUL" class="list">
 
-          <button style="display: flex; align-items: center;"
-            onclick="location.href='./member/Phuong_Anh.html';">
+          <button style="display: flex; align-items: center;" onclick="location.href='./member/Phuong_Anh.html';">
             <div style="margin-left: 10px;">
               <a>
                 <font color="white">Hồ Khôi Phục</font>
@@ -207,7 +214,7 @@
 
           <button style="display: flex; align-items: center;"
             onclick="location.href=&#39;./member/Phuong_Anh.html&#39;">
-            <img src="member/image/Tran_Dan.jpg" width="60" height="60" >
+            <img src="member/image/Tran_Dan.jpg" width="60" height="60">
             <div style="margin-left: 10px;">
               <a>
                 <font color="white">Bác Trần Dần</font>
@@ -274,7 +281,8 @@
                 <font color="white">Lê Đoàn Thị Hồng Ngọc</font>
               </a>
               <div>
-                <font size="2" color="#E8E8E8">Bạn bè, tôi ko sợ Ngọc đâu... À nhầm... em chỉ dám viết lời chúc thôi, ko
+                <font size="2" color="#E8E8E8">Bạn bè, tôi ko sợ Ngọc đâu... À nhầm... em chỉ dám viết lời chúc thôi,
+                  ko
                   dám
                   viết thêm gì đâu 😅</font>
               </div>
@@ -643,59 +651,71 @@
     </div>
 
   </div>
-  <!-- The Modal -->
+
   <span id="myModal" class="HopThoai">
 
-    <!-- Modal content -->
-    <div class="HopThoai-content">
-      <span class="close">&times;</span>
+    <div style="display: flex; align-items: center; position: relative;">
+      <!-- Modal content -->
+      <div class="HopThoai-content">
+        <span class="close">&times;</span>
 
-      <div>
-        <font color="Gray">
-          <p>Chào mọi người, đây là web thiết kế cho bạn bè, còn có web tôi dành cho gia đình, người thân, người
-            quen hay thầy cô nhưng nó ở web khác.</p>
-          <p>Sau khi thi t có thêm chút thời gian viết code và tôi chỉ thiết kế được web đơn giản, đơn sơ kiểu này thôi,
-            chứ t ko làm cho nó trở nên dễ thương hay đẹp được, đôi lúc sẽ có 1 vài lỗi (chính tả, hiển thị,...), chưa
-            được tối ưu web lắm mong mn thông cảm.
-          </p>
-          <p>Khi tui làm lời chúc này tui cũng tính chèn thêm hình đại diện của mn để đặt trước các nút nhấn (chứa
-            tên mn) và gắn thêm vô form thư chúc tết ở web này, nhưng tui cũng ngại xin phép mn,
-            vì nó cũng liên quan đến quyền riêng tư cá nhân nên cuối cùng t thôi, nhưng nếu tui chèn
-            hình của mọi người tui cũng sẽ bảo đảm riêng tư cho hình
-            và cuối cùng t chỉ chèn hình 1 ng duy nhất , đó là <i>Trần Dần (riêng bác này ko cần xin phép, ko cần
-              phải mất công chỉnh chế độ riêng tư vì quá nổi tiếng và lan đầy trên mạng)</i>.
-          </p>
+        <div>
+          <font color="Gray">
+            <p>Chào mọi người, đây là web thiết kế cho bạn bè, còn có web tôi dành cho gia đình, người thân, người
+              quen hay thầy cô nhưng nó ở web khác.</p>
+            <p>Sau khi thi t có thêm chút thời gian viết code và tôi chỉ thiết kế được web đơn giản, đơn sơ kiểu này
+              thôi,
+              chứ t ko làm cho nó trở nên dễ thương hay đẹp được, đôi lúc sẽ có 1 vài lỗi (chính tả, hiển thị,...),
+              chưa
+              được tối ưu web lắm mong mn thông cảm.
+            </p>
+            <p>Khi tui làm lời chúc này tui cũng tính chèn thêm hình đại diện của mn để đặt trước các nút nhấn (chứa
+              tên mn) và gắn thêm vô form thư chúc tết ở web này, nhưng tui cũng ngại xin phép mn,
+              vì nó cũng liên quan đến quyền riêng tư cá nhân nên cuối cùng t thôi, nhưng nếu tui chèn
+              hình của mọi người tui cũng sẽ bảo đảm riêng tư cho hình
+              và cuối cùng t chỉ chèn hình 1 ng duy nhất , đó là <i>Trần Dần (riêng bác này ko cần xin phép, ko cần
+                phải mất công chỉnh chế độ riêng tư vì quá nổi tiếng và lan đầy trên mạng)</i>.
+            </p>
 
-          <div style="display: none; color: dodgerblue; cursor: pointer;" id="MoRongKhoiPhuc">> Nếu bạn có muốn đọc
-            thêm, nhấn dòng
-            chữ xanh này (sẽ biết t <u>yêu gì</u>) hãy đeo kính tối nếu ko muốn bị chói mắt, vì đây là ánh sáng của
-            Đảng.
-          </div>
-          <div style="display:none;" id="KPMo">
-            <p style=" background: linear-gradient(to right, rgb(230,73,73) 0%, rgb(230,200,61) 100%);background-clip: text;
-                -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
-                transition: color 1s ease-in-out;"><b>T YÊU ĐẢNG CỘNG HÒA(VNCH)CHỨ GÌ NỮA ❤️
-              </b></p>
-          </div>
-          <p style="color: rgb(0,168,148)">Lời khuyên: để các sự kiện, đồ họa, giao diện, của các đối tượng hoạt động 1
-            cách tốt nhất hãy cập nhật trình duyệt lên phiên bản mới nhất (Nếu chưa cập nhật) và mở trên máy tính
-            nha và hi vọng trang web này mang cho bạn niềm vui cũng như lời chúc tết trong đêm giao thừa hay mồng 1
-            tết.</p>
+            <div style="display: none; color: dodgerblue; cursor: pointer;" id="MoRongKhoiPhuc">> Nếu bạn có muốn đọc
+              thêm, nhấn dòng
+              chữ xanh này (sẽ biết t <u>yêu gì</u>) hãy đeo kính tối nếu ko muốn bị chói mắt, vì đây là ánh sáng của
+              Đảng.
+            </div>
+            <div style="display:none;" id="KPMo">
+              <p style=" background: linear-gradient(to right, rgb(230,73,73) 0%, rgb(230,200,61) 100%);background-clip: text;
+              -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+              transition: color 1s ease-in-out;"><b>T YÊU ĐẢNG CỘNG HÒA(VNCH)CHỨ GÌ NỮA ❤️
+                </b></p>
+            </div>
+            <p style="color: rgb(0,168,148)">Lời khuyên: để các sự kiện, đồ họa, giao diện, của các đối tượng hoạt
+              động
+              1
+              cách tốt nhất hãy cập nhật trình duyệt lên phiên bản mới nhất (Nếu chưa cập nhật) và mở trên máy tính
+              nha và hi vọng trang web này mang cho bạn niềm vui cũng như lời chúc tết trong đêm giao thừa hay mồng 1
+              tết.</p>
 
-          <p>À mà tui cũng tính viết 1 code thêm con mắt <i>Rinnegan</i> mà t thấy <i>khó - phức tạp quá</i> nên thôi. T
-            móc đại con mắt của <a href="https://vi.wikipedia.org/wiki/Uchiha_Itachi">Uchiha Itachi</a> và nhét nó vô
-            đây.</p>
-        </font>
+            <p>À mà tui cũng tính viết 1 code thêm con mắt <i>Rinnegan</i> mà t thấy <i>khó - phức tạp quá</i> nên
+              thôi.
+              T
+              móc đại con mắt của <a href="https://vi.wikipedia.org/wiki/Uchiha_Itachi">Uchiha Itachi</a> và nhét nó
+              vô
+              đây.</p>
+          </font>
+        </div>
+
       </div>
 
     </div>
 
   </span>
-  <link rel="stylesheet" href="css/membuttonlist.css"/>
-  <link rel="stylesheet" href="css/sharinganstyle.css"/>
-  <link rel="stylesheet" href="css/textbox.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="css/itachisharingan.css"/>
+
+
+  <link rel="stylesheet" href="css/membuttonlist.css" />
+  <link rel="stylesheet" href="css/sharinganstyle.css" />
+  <link rel="stylesheet" href="css/textbox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/itachisharingan.css" />
 
   <script>
     function myFunction() {
